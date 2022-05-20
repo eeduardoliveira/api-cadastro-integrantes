@@ -7,7 +7,5 @@ import org.springframework.web.bind.annotation.RestController;
 public class StatusController {
 
     @GetMapping(path = "/api/status") //Função GET
-    public String check(){
-        return "online";
-    }
+    public String check(){return "online";}
 }

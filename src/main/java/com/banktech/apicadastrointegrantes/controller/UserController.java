@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 
@@ -41,8 +40,15 @@ public class UserController {
     public ResponseEntity delete(@RequestParam Integer codigo) {
         repository.deleteById(codigo);
         return new ResponseEntity<String>("User Deleted", HttpStatus.OK);
-
     }
+
+    @GetMapping(path ="/api/usuario/{unidade}")
+    public List<UserModel> showTenant(){
+      return repository.findAllByUnidade("{unidade}");
+    }
+
+
+
 
 }
 

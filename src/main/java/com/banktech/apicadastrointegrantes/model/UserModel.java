@@ -1,13 +1,13 @@
 package com.banktech.apicadastrointegrantes.model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "usuario")
 public class UserModel {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer codigo;
 
     @Column(nullable = false, length = 100)
@@ -21,6 +21,9 @@ public class UserModel {
 
     @Column(nullable = false, length = 10)
     public String login;
+
+    @Column
+    public String papel;
 
     @Column(nullable = false, length = 10)
     public String senha;
@@ -73,5 +76,17 @@ public class UserModel {
         this.senha = senha;
     }
 
+    public String getPapel() {
+        return papel;
+    }
 
+    public void setPapel(String papel) {
+        this.papel = papel;
+    }
+
+    public void setRole(String nome) {
+    }
 }
+
+
+
