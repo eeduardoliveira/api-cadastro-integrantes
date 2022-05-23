@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //@Deprecated
 //public class TenantInterceptor extends HandlerInterceptorAdapter
-    public class TenantInterceptor implements HandlerInterceptor {
+public class TenantInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception{
