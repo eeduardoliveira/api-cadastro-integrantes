@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class UserModel {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer codigo;
 
     @Column(nullable = false, length = 100)
@@ -22,11 +21,9 @@ public class UserModel {
     @Column(nullable = false, length = 10)
     public String login;
 
-    @Column
-    public String papel;
-
     @Column(nullable = false, length = 10)
     public String senha;
+
 
     public Integer getCodigo() {
         return codigo;
@@ -76,16 +73,6 @@ public class UserModel {
         this.senha = senha;
     }
 
-    public String getPapel() {
-        return papel;
-    }
-
-    public void setPapel(String papel) {
-        this.papel = papel;
-    }
-
-    public void setRole(String nome) {
-    }
 }
 
 

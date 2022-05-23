@@ -8,9 +8,5 @@ import java.util.List;
 
 
 public interface UserRepository extends JpaRepository<UserModel, Integer> { // < Classe(modelo de dados), id da classe (tipo d o id)
-
-
     List<UserModel> findAllByUnidade(String unidade);
-
-    UserModel findbyLogin(String login);
 }

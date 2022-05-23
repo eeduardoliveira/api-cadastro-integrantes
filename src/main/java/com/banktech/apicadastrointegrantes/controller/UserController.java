@@ -43,11 +43,9 @@ public class UserController {
     }
 
     @GetMapping(path ="/api/usuario/{unidade}")
-    public List<UserModel> showTenant(){
+    public List<UserModel> consultaUnidade(@PathVariable("unidade") String unidade){
       return repository.findAllByUnidade("{unidade}");
     }
-
-
 
 
 }
