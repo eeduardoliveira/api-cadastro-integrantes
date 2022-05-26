@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class UserModel {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer codigo;
 
     @Column(nullable = false, length = 100)
@@ -15,7 +16,7 @@ public class UserModel {
     @Column(nullable = false, length = 5)
     public Integer matricula;
 
-    @Column(nullable = false, length = 10)
+    @JoinColumn( name = "")
     public String unidade;
 
     @Column(nullable = false, length = 10)
